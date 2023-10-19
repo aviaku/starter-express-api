@@ -11,11 +11,11 @@ const stripe = require("stripe")(
   "sk_test_51M6UVmSA1CggwQAXcM5Pd85IGKpJbvipXI3Vc8mr466lFEH49hXU5nqjcvnStjeRQveIk2wzghrUNrulpMxoAem700CCMkWZbz"
 );
 const paypal = require("paypal-rest-sdk");
-const tempDirectory = "/tmp/assets/images";
+// const tempDirectory = "/tmp/assets/images";
 
-if (!fs.existsSync(tempDirectory)) {
-  fs.mkdirSync(tempDirectory);
-}
+// if (!fs.existsSync(tempDirectory)) {
+//   fs.mkdirSync(tempDirectory);
+// }
 
 dotenv.config();
 
