@@ -39,6 +39,6 @@ const updateAuctionStatus = async () => {
 
 // Schedule the cron job
 cron.schedule("*/2 * * * * *", () => {
-  console.log("Running cron job...");
+  // console.log("Running cron job...");
   updateAuctionStatus();
 });
