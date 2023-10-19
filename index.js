@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const fileUpload = require("express-fileupload");
 const { readdirSync } = require("fs");
+const fs = require("fs");
 const dotenv = require("dotenv");
 const serverless = require("serverless-http");
 const userRoute = require("./routes/user");
@@ -10,6 +11,11 @@ const stripe = require("stripe")(
   "sk_test_51M6UVmSA1CggwQAXcM5Pd85IGKpJbvipXI3Vc8mr466lFEH49hXU5nqjcvnStjeRQveIk2wzghrUNrulpMxoAem700CCMkWZbz"
 );
 const paypal = require("paypal-rest-sdk");
+const tempDirectory = "/tmp/images";
+
+if (!fs.existsSync(tempDirectory)) {
+  fs.mkdirSync(tempDirectory);
+}
 
 dotenv.config();
 
